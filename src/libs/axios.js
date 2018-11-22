@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-let base = 'http://192.168.102.131';
+let base = 'http://www.yinkaiyan.cn';
 console.log(base);
 //post
 export const postData = (url, params) => {
