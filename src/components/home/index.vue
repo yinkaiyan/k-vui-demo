@@ -27,6 +27,7 @@ import {
   login
 } from "@/api/index";
 import { Divider } from 'vux'
+import homedata from './data/data.js'
 export default {
   name: 'index',
    components: {
@@ -38,6 +39,7 @@ export default {
     }
   },
   mounted(){
+    console.log(homedata);
     login({
       phone:"123456",
       password:"123456"

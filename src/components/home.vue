@@ -1,18 +1,17 @@
 <style scoped>
-
+  
 </style>
 <template>
-  <div class="hello">
-    <grid>
-      <grid-item label="Grid" v-for="i in 9">
-        <img slot="icon" src="../assets/grid_icon.png">
-      </grid-item>
-    </grid>
+  <div class="home_xm">
     <router-view></router-view>
+    <div class="home_xm_bottom">
+      <i class="icon iconfont">&#xe600;</i>
+    </div>
   </div>
 </template>
 
 <script>
+import "../icon/icon.css";
 import { Grid, GridItem } from 'vux'
 export default {
   name: 'index',
