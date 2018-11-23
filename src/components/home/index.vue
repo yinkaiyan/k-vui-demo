@@ -2,23 +2,46 @@
   @import "./home.less";
 </style>
 <template>
-  <div class="home">
-    <divider>我是有底线的</divider>
-    <div class="home1">
-        1
-        <div class="home2">
-            2
-        </div>
-    </div>
-     <router-link 
-        :to="{
-            name:'index_',
-            query:{
-                id:'10'
-            }
-        }" tag="div">
-        index
-    </router-link>
+  <div class="home_page_home">
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     111<br/>
+     222<br/>
   </div>
 </template>
 

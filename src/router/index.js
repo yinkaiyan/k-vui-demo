@@ -23,8 +23,39 @@ export default new Router({
           name:"index",
           component: resolve => require(['@/components/home/index.vue'], resolve),
           meta: { title: '首页' }
-        },
+        },{
+          //我的
+          path: '/my',
+          name:"my",
+          component: resolve => require(['@/components/home/my.vue'], resolve),
+          meta: { title: '我的' }
+        },{
+          //精选
+          path: '/selected',
+          name:"selected",
+          component: resolve => require(['@/components/home/selected.vue'], resolve),
+          meta: { title: '精选' }
+        },{
+          //榜单
+          path: '/list',
+          name:"list",
+          component: resolve => require(['@/components/home/list.vue'], resolve),
+          meta: { title: '榜单' }
+        },{
+          //视频
+          path: '/video',
+          name:"video",
+          component: resolve => require(['@/components/home/video.vue'], resolve),
+          meta: { title: '视频' }
+        }
       ]
+    },
+    {
+      //主页我的播放
+      path: '/play',
+      name:"play",
+      component: resolve => require(['@/components/home/play.vue'], resolve),
+      meta: { title: 'play' }
     },
     //index
     {

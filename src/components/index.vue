@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <divider>我是有底线的</divider>
+    <divider>我是有底线的================</divider>
   </div>
 </template>
 

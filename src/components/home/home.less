@@ -1,18 +1,74 @@
 
-@color:red;
-.home1{
-    color:@color;
-    .home2{
-       background:gold;
-       height:100px;
-    }
-}
 //主页
+@color:#5e5c5c;
+.home_xm{
+    float: left;
+    width:100%;
+}
 .home_xm_bottom{
     width:100%;
     position: absolute;
     height:50px;
     bottom: 0px;
+    z-index: 9999;
     left:0px;
-    background:gray;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    .home_xm_list{
+        float: left;
+        width:20%;
+        color:@color;
+        margin-bottom:4px;
+        i,
+        span{
+            width:100%;
+            float: left;
+            display:block;
+            text-align:center;
+        };
+        i{
+            height:30px;
+            line-height:32px;
+            font-size:20px;
+        };
+        span{
+            height:16px;
+            line-height:16px;
+            font-size:12px;
+        }
+    }
+    .home_xm_list:nth-of-type(3),
+    .home_xm_list:nth-of-type(4){
+        float: right;
+    }
+    .active{
+        color:#ff3366;
+    }
+    .home_xm_head{
+        position: absolute;
+        width:56px;
+        left:calc(50% - 28px);
+        padding:3px;
+        box-sizing: border-box;
+        height:50px;
+        bottom:14px;
+        background: #fff;
+        border-radius:50%;
+        img{
+            width:52px;
+            height:52px;
+            display:block;
+            position: absolute;
+            left:calc(50% - 26px);
+            border-radius:50%;
+        }
+    }
+}
+.home-content{
+    width:100%;
+    position: absolute;
+    height:calc(100% - 50px);
+    z-index: 9;
+    overflow: auto;
+    background:#c8c8c8;
 }
