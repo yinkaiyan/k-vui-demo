@@ -3,7 +3,6 @@
 </style>
 <template>
   <div>
-    <div v-transfer-dom>
       <popup v-model="group" height="100%">
         <div class="play-content">
           <div class="play-tab-nav">
@@ -12,7 +11,9 @@
             </div>
             <div class="play-xx">
               <div>做个有学问的人</div>
-              <div>郭德纲&&于谦 <i class="icon iconfont icon-weibiaoti34"></i></div>
+              <div>
+                <span>郭德纲&&于谦</span> 
+                <i class="icon iconfont icon-weibiaoti34"></i></div>
             </div>
             <div class="play-fx" @click="playFx">
               <i class="icon iconfont icon-fenxiang"></i>
@@ -37,12 +38,24 @@
           </div>
         </div>
       </popup>
-    </div>
+    <!--分享-->
+      <popup v-model="groupfx" height="270px" is-transparent>
+        <div style="width: 95%;background-color:#fff;height:250px;margin:0 auto;border-radius:5px;padding-top:10px;">
+         <group>
+          <cell title="Product" value="Donate"></cell>
+          <cell title="Total" value="$10.24"></cell>
+         </group>
+         <div style="padding:20px 15px;">
+          <x-button type="primary">Pay</x-button>
+          <x-button @click.native="groupfx = false">Cancel</x-button>
+         </div>
+        </div>
+      </popup>
   </div>
 </template>
 
 <script>
-import { TransferDom, Popup } from 'vux'
+import { TransferDom, Popup ,Group,XButton,Cell} from 'vux'
 
 export default {
   directives: {
@@ -50,10 +63,14 @@ export default {
   },
   components: {
     Popup,
+    Group,
+    XButton,
+    Cell
   },
   data () {
     return {
       group: true,
+      groupfx:false,
       cover:require("./images/geg.jpg")
     }
   },
@@ -65,7 +82,7 @@ export default {
       });
     },
     playFx(){
-
+      this.groupfx=true
     },
   },
   watch: {

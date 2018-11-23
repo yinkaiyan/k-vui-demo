@@ -14,6 +14,8 @@ export default {
 body{
   padding: 0px;
   margin:0px;
+  width:100%;
+  float: left;
 }
 
 </style>

@@ -10,7 +10,7 @@
     position: absolute;
     height:50px;
     bottom: 0px;
-    z-index: 9999;
+    z-index: 99;
     left:0px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
@@ -103,13 +103,21 @@
                 float: left;
             };
             div:nth-of-type(1){
-                height:24px;
-                line-height:24px;
+                height:20px;
+                line-height:20px;
+                font-size:14px;
+                margin-top:4px;
             };
             div:nth-of-type(2){
                 height:18px;
                 line-height:18px;
                 font-size:12px;
+                span{
+                    display:inline-block;
+                };
+                i{
+                    display:inline-block;
+                }
             };
         }
     }
