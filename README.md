@@ -1,30 +1,16 @@
-# phone
+VUX-APP
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
+# 安装
 npm install
 
-# serve with hot reload at localhost:8080
+# 运行
 npm run dev
 
-# build for production with minification
+# 打包
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# 持续更新中
 
-# run unit tests
-npm run unit
+# 预览地址
 
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![image]( http://www.yinkaiyan.cn/case/VUX-APP/1542953985.png )

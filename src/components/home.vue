@@ -69,7 +69,10 @@ export default {
       this.$router.push({
         name:'play',
       });
-    }
+    },
+  },
+  created(){
+    console.log(this.$route.path);
   }
 }
 </script>
