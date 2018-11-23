@@ -1,4 +1,5 @@
 VUX-APP
+# 仿小米音乐播放器APP
 
 # 安装
 npm install

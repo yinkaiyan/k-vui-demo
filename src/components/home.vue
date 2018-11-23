@@ -28,6 +28,7 @@
 
 <script>
 import "../icon/icon.css";
+import { verification } from '../api/verification'
 import { Grid, GridItem } from 'vux'
 export default {
   name: 'index',
@@ -71,8 +72,26 @@ export default {
       });
     },
   },
+  mounted(){
+    console.log(verification.isMailbox("12545"));
+  },
   created(){
-    console.log(this.$route.path);
+    let path=this.$route.path;
+    console.log(path);
+    switch(path){
+      case "/my":
+        this.activeTab=0;
+        break;
+      case "/selected":
+        this.activeTab=1;
+        break;
+      case "/list":
+        this.activeTab=3;
+        break;
+      case "/video":
+        this.activeTab=2;
+        break;
+    };
   }
 }
 </script>

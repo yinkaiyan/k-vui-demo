@@ -1,11 +1,40 @@
+<style scoped lang="less">
+  @import "./home";
+</style>
 <template>
   <div>
     <div v-transfer-dom>
-      <popup v-model="show1" height="100%">
-        <div class="popup1">
-          <group>
-            <x-switch title="Another XSwitcher" v-model="show1"></x-switch>
-          </group>
+      <popup v-model="group" height="100%">
+        <div class="play-content">
+          <div class="play-tab-nav">
+            <div class="play-fh" @click="playFh">
+              <i class="icon iconfont icon-xiala"></i>
+            </div>
+            <div class="play-xx">
+              <div>做个有学问的人</div>
+              <div>郭德纲&&于谦 <i class="icon iconfont icon-weibiaoti34"></i></div>
+            </div>
+            <div class="play-fx" @click="playFx">
+              <i class="icon iconfont icon-fenxiang"></i>
+            </div>
+          </div>
+          <div class="play-cover">
+            <img :src="cover">
+          </div>
+          <div class="play-btn">
+            <div class="play-btn-list">
+              <i class="icon iconfont icon-guanzhu"></i>
+            </div>
+            <div class="play-btn-list">
+              <i class="icon iconfont icon-xiazai"></i>
+            </div>
+            <div class="play-btn-list">
+              <i class="icon iconfont icon-xinxi"></i>
+            </div>
+            <div class="play-btn-list">
+              <i class="icon iconfont icon-gengduo1"></i>
+            </div>
+          </div>
         </div>
       </popup>
     </div>
@@ -13,7 +42,7 @@
 </template>
 
 <script>
-import { TransferDom, Popup, Group, XSwitch } from 'vux'
+import { TransferDom, Popup } from 'vux'
 
 export default {
   directives: {
@@ -21,18 +50,23 @@ export default {
   },
   components: {
     Popup,
-    Group,
-    XSwitch,
   },
   data () {
     return {
-      show1: true,
+      group: true,
+      cover:require("./images/geg.jpg")
     }
   },
   methods: {
-    log (str) {
-      console.log(str)
-    }
+    playFh () {
+      this.group=false;
+      this.$router.push({
+        name:'selected',
+      });
+    },
+    playFx(){
+
+    },
   },
   watch: {
     show10 (val) {
@@ -45,9 +79,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less" scoped>
-.popup1 {
-  width:100%;
-}
-</style>

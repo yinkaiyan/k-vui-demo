@@ -9,8 +9,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      redirect: 'index'
+      name: 'selected',
+      redirect: 'selected'
     },
     //home
     {
@@ -19,11 +19,6 @@ export default new Router({
       component: home,
       children: [
         {
-          path: '/index',
-          name:"index",
-          component: resolve => require(['@/components/home/index.vue'], resolve),
-          meta: { title: '首页' }
-        },{
           //我的
           path: '/my',
           name:"my",
