@@ -12,7 +12,7 @@ export var verification = {
         var URLTOBASE64 = new base64InOut();
         var base64 = URLTOBASE64.base64Encodes(link);
         if (isWeixin) {
-            var search = encodeURIComponent("https://www.0791ly.cn/cd/authLogin?redirectUrl=" + base64);
+            var search = encodeURIComponent("" + base64);
             window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb7d2546da9c36972&redirect_uri=" + search + "&response_type=code&scope=snsapi_base&state=3d6be0a4035d839573b04816624a415e&connect_redirect=1#wechat_redirect";
         }else{
             callback();
@@ -23,7 +23,7 @@ export var verification = {
         var url = window.location.href.replace("?", "&");
         $.ajax({
             type: "GET",
-            url: "https://www.0791ly.cn" + "/cd/jssdk?url=" + url,
+            url: "" + url,
             dataType: "json",
             success: function(data) {
                 wx.config({
@@ -38,9 +38,9 @@ export var verification = {
             error: function(data) {}
         });
         wx.ready(function() {
-            var title = "汇海国际楼宇智慧党建";
-            var description = "汇海国际楼宇智慧党建欢迎您";
-            var imgUrl = "https://0791ly.cn/upload/image/fx.png";
+            var title = "";
+            var description = "";
+            var imgUrl = "";
             /*
             朋友圈 timeline
             分享给朋友 appMessage
@@ -50,50 +50,35 @@ export var verification = {
             */
             // 分享到QQ
             wx.onMenuShareQQ({
-                title: "汇海国际楼宇智慧党建", //名称
-                desc: "汇海国际楼宇智慧党建欢迎您", //描述
+                title: "", //名称
+                desc: "", //描述
                 link: window.location.href,
-                imgUrl: "https://0791ly.cn/upload/image/fx.png", //放全景图片路径
+                imgUrl: "", //放全景图片路径
                 success: function(res) {
                     //shareSuccess("1");
                 }
             });
             // 分享给朋友
             wx.onMenuShareAppMessage({
-                title: "汇海国际楼宇智慧党建", //名称
-                desc: "汇海国际楼宇智慧党建欢迎您", //描述
+                title: "", //名称
+                desc: "", //描述
                 link: window.location.href,
-                imgUrl: "https://0791ly.cn/upload/image/fx.png", //放全景图片路径
+                imgUrl: "", //
                 success: function(res) {
                     //shareSuccess("1");
                 }
             });
             // 分享到朋友圈
             wx.onMenuShareTimeline({
-                title: "汇海国际楼宇智慧党建", //名称
-                desc: "汇海国际楼宇智慧党建欢迎您", //描述
+                title: "", //名称
+                desc: "", //描述
                 link: window.location.href,
-                imgUrl: "https://0791ly.cn/upload/image/fx.png", //放全景图片路径
+                imgUrl: "", 
                 success: function(res) {
                     //shareSuccess("2");
                 }
             });
         });
-        // 分享成功回调
-        // function shareSuccess(type) {
-        //     var data = {
-        //         url: "https://www.3vshow.com" + '/shop/shareReport/share.jhtml',
-        //         data: {
-        //             shareType: type
-        //         },
-        //     };
-
-        //     self.ajaxGET(data, function(information) {
-        //         // alert("分享成功 ╰(*´︶`*)╯");
-        //     }, function() {
-        //         // alert("分享失败 ╮(๑•́ ₃•̀๑)╭");      
-        //     });
-        // };
     },
     //验证邮箱
     isMailbox:function(val) {
