@@ -18,7 +18,7 @@
       </div>
       <div class="selected-content">
         <div class="selected-banner">
-          <swiper :list="banner_list" v-model="index" @on-index-change="banner_Change" dots-position="center" auto ></swiper>
+          <swiper :list="banner_list" v-model="index" dots-position="center" auto ></swiper>
         </div>
         <div class="selected-popular">
           <div class="selected-popular-list" v-for="(name,index) in popular" :key="index">
@@ -43,6 +43,7 @@
 
 <script>
 import { Search,Swiper,SwiperItem} from 'vux'
+
 const baseList = [{
   url: 'javascript:;',
   img: 'https://ww1.sinaimg.cn/large/663d3650gy1fq66vvsr72j20p00gogo2.jpg',
@@ -56,6 +57,7 @@ const baseList = [{
   title: '一次旅行',
   fallbackImg: 'https://ww1.sinaimg.cn/large/663d3650gy1fq66vw50iwj20ff0aaaci.jpg'
 }];
+
 const tabs=[{
   name:"排行棒",
   link:"my",
@@ -83,7 +85,6 @@ export default {
     Swiper,
     SwiperItem,
   },
-
   data () {
     return {
       public:true,
@@ -107,9 +108,6 @@ export default {
         this.Aactive=false;
         this.Bactive=true;
       };
-    },
-    banner_Change (index) {
-      this.demo01_index = index
     },
   },
   watch: {

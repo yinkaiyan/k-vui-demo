@@ -15,8 +15,10 @@
   }
   
  
-  .icon-weibiaoti34:before { content: "\e634"; }
+  .icon-tubiaozhexiantu:before { content: "\e600"; }
 
+  .icon-weibiaoti34:before { content: "\e634"; }
+  
   .icon-weibiaoti105:before { content: "\e609"; }
   
   .icon-huangguan:before { content: "\e71c"; }
@@ -32,6 +34,12 @@
   .icon-suijibofang:before { content: "\e66b"; }
   
   .icon-danquxunhuan:before { content: "\e66d"; }
+  
+  .icon-pillar:before { content: "\e613"; }
+  
+  .icon-mianjitu:before { content: "\e618"; }
+  
+  .icon-zhexiantu:before { content: "\e605"; }
   
   .icon-shipin:before { content: "\e61d"; }
   
@@ -58,3 +66,5 @@
   .icon-shangyiqu:before { content: "\e800"; }
   
   .icon-bofang:before { content: "\e66e"; }
+  
+  .icon-icon-test:before { content: "\e66c"; }

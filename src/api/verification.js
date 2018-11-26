@@ -106,22 +106,22 @@ export var verification = {
         obj=obj.substring(index+1,obj.length);
         return obj;
     },
-    getThisTime:function(day){
-        var today = new Date();
-        var targetday_milliseconds=today.getTime() + 1000*60*60*24*day;
-        today.setTime(targetday_milliseconds); 
-        var tYear = today.getFullYear();
-        var tMonth = today.getMonth();
-        var tDate = today.getDate();
-        tMonth = this.doHandleMonth(tMonth + 1);
-        tDate = this.doHandleMonth(tDate);
-        return tYear+"-"+tMonth+"-"+tDate;
-    },
-    doHandleMonth:function(month){
-        var m = month;
-        if(month.toString().length == 1){
-            m = "0" + month;
+    //获取当前日期
+    getNowFormatDate:function(){
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
         };
-        return m;
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        };
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + date.getSeconds();
+        return currentdate;
     },
 }

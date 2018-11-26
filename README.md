@@ -14,4 +14,4 @@ npm run build
 
 # 预览地址
 
-![image]( http://www.yinkaiyan.cn/case/VUX-APP/1542953985.png )
+![image]( http://www.yinkaiyan.cn/case/VUX-APP/qerd.png )

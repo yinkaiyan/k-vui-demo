@@ -1,22 +1,32 @@
 <template>
   <div>
-    <div>
-      我的
-    </div>
+    <x-button type="primary" link="/chart/line">
+      统计图表
+    </x-button>
   </div>
 </template>
 
 <script>
+import { XButton, Box, GroupTitle, Group, Flexbox, FlexboxItem, Divider } from 'vux'
 
 export default {
+   components: {
+    XButton,
+    Box,
+    GroupTitle,
+    Group,
+    Flexbox,
+    FlexboxItem,
+    Divider
+  },
   data () {
     return {
       show1: true,
     }
   },
   methods: {
-    log (str) {
-      console.log(str)
+    btnClick(){
+     
     }
   },
   watch: {
