@@ -5,6 +5,7 @@
     </div>
     <bottom-Menu
       :menu-list="menuList"
+      type="chart"
     >
     </bottom-Menu>
   </div>
@@ -20,6 +21,7 @@ export default {
   },
   data () {
     return {
+      activeTab:0,
       menuList:[
         {
           name:"折线图",
@@ -44,7 +46,11 @@ export default {
         }
       ],
     }
-  }
+  },
+  methods:{
+   
+  },
+
 }
 </script>
 

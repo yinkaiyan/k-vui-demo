@@ -8,6 +8,7 @@
     </div>
     <bottom-Menu
       :menu-list="menuList"
+      type="home"
     >
     </bottom-Menu>
     <div class="home_xm_head" @click="myClick">

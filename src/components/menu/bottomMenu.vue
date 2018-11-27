@@ -19,6 +19,7 @@
 export default {
   props: {
     menuList: Array,
+    type:String,
   },
   data () {
     return {
@@ -38,19 +39,39 @@ export default {
   },
   created(){
     let path=this.$route.path;
-    switch(path){
-      case "/my":
-        this.activeTab=0;
-        break;
-      case "/selected":
-        this.activeTab=1;
-        break;
-      case "/list":
-        this.activeTab=3;
-        break;
-      case "/video":
-        this.activeTab=2;
-        break;
+    if(this.type=="chart"){
+      switch(path){
+        case "/chart/line":
+          this.activeTab=0;
+          break;
+        case "/chart/graph":
+          this.activeTab=1;
+          break;
+        case "/chart/gradual":
+          this.activeTab=4;
+          break;
+        case "/chart/area":
+          this.activeTab=3;
+          break;
+        case "/chart/columnar":
+          this.activeTab=2;
+          break;
+      }
+    }else if(this.type=="home"){
+      switch(path){
+        case "/home/my":
+          this.activeTab=0;
+          break;
+        case "/home/selected":
+          this.activeTab=1;
+          break;
+        case "/home/list":
+          this.activeTab=3;
+          break;
+        case "/home/video":
+          this.activeTab=2;
+          break;
+      }
     };
   }
 }
