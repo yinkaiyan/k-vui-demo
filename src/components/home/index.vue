@@ -12,14 +12,23 @@
       <div class="test-paper-title">
         试卷标题
       </div>
+      <div class="test-paper-content">
+        <div class="test-paper-list">
+          <single></single>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import timePage from '../assembly/time';
+import single from '../assembly/single';
+import judge from '../assembly/judge';
 export default {
   components:{
     timePage,
+    single,
+    judge
   },
   name: 'index',
   data () {
