@@ -1,5 +1,5 @@
 <template>
-  <div class="k-radio" :style="getStyle" @touchend="radioClick">
+  <div class="k-radio" :style="getStyle" @touchstart="radioClick" @touchend="radioClick_">
     <input class="magic-radio" type='radio' name="test">
     <span class="k-ra-radio">
       <icon type="success" v-if="active"></icon>
@@ -85,7 +85,7 @@ export default {
       font-size: 20px;
       position:absolute;
       left: -5px;
-      top: 0px;
+      top: -1px;
     }
   }
   .k-ra-text{

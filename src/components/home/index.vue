@@ -5,7 +5,7 @@
 <template>
   <div class="dt-index">
     <time-page
-      :time="10"
+      :time="100"
       :callback="callbackFun"
     ></time-page>
     <div class="test-paper">
@@ -46,7 +46,37 @@
             </k-radio>
           </k-radiogroup>
         </div>
+        <div class="test-paper-list">
+          <k-radiogroup 
+            :value="2"
+            :callBack="callbackFun"
+            :max="2"
+            title="回家看韩剧看dh觉得很简单俄计划范儿和巨额花费金额恩和人家饿的空间俄将获得健康"
+          >
+            <k-radio
+              label="sdgfdgfhfhdg"
+            >
+            </k-radio>
+            <k-radio
+              label="test002"
+            >
+            </k-radio>
+            <k-radio
+              label="test002"
+            >
+            </k-radio>
+            <k-radio
+              label="test002"
+            >
+            </k-radio>
+            <k-radio
+              label="test002"
+            >
+            </k-radio>
+          </k-radiogroup>
+        </div>
       </div>
+      
     </div>
 
 
