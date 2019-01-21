@@ -1,5 +1,8 @@
 <template>
   <div class="k-checkboxgroup">
+    <div class="tm-title">
+      {{title}}
+    </div>
     <slot></slot>
   </div>
 </template>
@@ -11,6 +14,9 @@ export default {
   props: {
    value:Number,
    callBack:Function,
+   vImg:Boolean,
+   max:Number,
+   title:String,
   },
   data () {
     return {
@@ -24,10 +30,19 @@ export default {
    
   },
   mounted(){
-   this.List();
+   //this.List();
   },
 }
 </script>
-<style scoped>
-
+<style scoped lang="less">
+.k-checkboxgroup{
+    width:calc(100% - 24px);
+    margin: 12px;
+    .tm-title{
+        width:100%;
+        float: left;
+        font-size: 18px;
+        font-weight: 600
+    }
+}
 </style>

@@ -1,10 +1,11 @@
 <template>
-  <div class="k-radio" :style="getStyle" @click="radioClick">
+  <div class="k-radio" :style="getStyle" @touchend="radioClick">
     <input class="magic-radio" type='radio' name="test">
     <span class="k-ra-radio">
       <icon type="success" v-if="active"></icon>
     </span>
     <span class="k-ra-text">{{label}}</span>
+    <img v-if="vImg?true:false" class="k-radio-img" :src="vImg">
   </div>
 </template>
 <script>
@@ -14,12 +15,14 @@ export default {
   components:{
    Icon
   },
+  //
+  //
   name:"k-radio",
   mixins: [childMix],
   props: {
    label:String,
    value:Boolean,
-   max:Number,
+   vImg:String,
   },
   data () {
     return {
@@ -32,6 +35,8 @@ export default {
   },
   computed: {
     getStyle(){
+      if(!this.$parent.max)return;
+      console.log(this.$parent.max);
       let len=this.max?this.max:1;
       if(len==1){
         return {
@@ -48,9 +53,20 @@ export default {
 <style scoped lang="less">
 .k-radio{
   float: left;
-  margin-left:12px;
+  margin: 6px 0;
+  padding: 12px;
+  box-sizing: border-box;
+  border: solid 1px gainsboro;
   .magic-radio{
     display:none;
+    
+  }
+  .k-radio-img{
+    max-width: 100%;
+    display: block;
+    border: none;
+    margin-top: 12px;
+    float: left;
   }
   .k-ra-radio{
     width:20px;
@@ -68,13 +84,13 @@ export default {
     i{
       font-size: 20px;
       position:absolute;
-      left: -6px;
+      left: -5px;
       top: 0px;
     }
   }
   .k-ra-text{
     float: left;
-    width:calc(100% - 24px);
+    width:calc(100% - 26px);
     line-height:20px;
     margin-left:4px;
     overflow: hidden;

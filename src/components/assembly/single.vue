@@ -11,14 +11,22 @@
       >
           <k-radio
             label="sdgfdgfhfhdg"
+            :v-img="img01"
           >
           </k-radio>
           <k-radio
             label="test002"
+            :v-img="img02"
           >
           </k-radio>
           <k-radio
-            label="test003"
+            label="test002"
+            :v-img="img01"
+          >
+          </k-radio>
+          <k-radio
+            label="test002"
+            :v-img="img02"
           >
           </k-radio>
       </k-radiogroup>
@@ -34,12 +42,10 @@ export default {
     KRadiogroup
   },
   name: 'single',
-  props:{
-    
-  },
   data () {
     return {
-      
+      img01:"https://cdn.3vshow.com/upload/image/site/web/blackLogo.png",
+      img02:"https://cdn.3vshow.com/upload/image/site/web/al-1.png",
     }
   },
   methods:{
