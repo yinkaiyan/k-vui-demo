@@ -14,7 +14,7 @@
       </div>
       <div class="test-paper-content">
         <div class="test-paper-list">
-          <k-radiogroup 
+          <k-radiogroup
             :value="2"
             :callBack="callbackFun"
             :max="2"
@@ -55,22 +55,27 @@
           >
             <k-radio
               label="sdgfdgfhfhdg"
+              id="1"
             >
             </k-radio>
             <k-radio
               label="test002"
+              id="2"
             >
             </k-radio>
             <k-radio
               label="test002"
+              id="3"
             >
             </k-radio>
             <k-radio
               label="test002"
+              id="4"
             >
             </k-radio>
             <k-radio
               label="test002"
+              id="5"
             >
             </k-radio>
           </k-radiogroup>
@@ -97,7 +102,7 @@ import timePage from '../assembly/time';
 import KRadio from "../assembly/radio/radio.vue"
 import KRadiogroup from "../assembly/radio/radioGroup.vue"
 
-import { Confirm, Group, XSwitch, XButton, TransferDomDirective as TransferDom } from 'vux'
+import { Confirm, Group, TransferDomDirective as TransferDom } from 'vux'
 export default {
   directives: {
     TransferDom
@@ -108,8 +113,6 @@ export default {
     KRadiogroup,
     Confirm,
     Group,
-    XSwitch,
-    XButton
   },
   name: 'index',
   data () {

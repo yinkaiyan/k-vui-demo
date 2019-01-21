@@ -23,6 +23,7 @@ export default {
    label:String,
    value:Boolean,
    vImg:String,
+   id:String,
   },
   data () {
     return {
