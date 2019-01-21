@@ -7,9 +7,10 @@
     <k-radiogroup 
         :value="2"
         :callBack="callbackFun"
+        :max="2"
       >
           <k-radio
-            label="test001"
+            label="sdgfdgfhfhdg"
           >
           </k-radio>
           <k-radio

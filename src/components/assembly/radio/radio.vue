@@ -1,5 +1,5 @@
 <template>
-  <div class="k-radio" @click="radioClick">
+  <div class="k-radio" :style="getStyle" @click="radioClick">
     <input class="magic-radio" type='radio' name="test">
     <span class="k-ra-radio">
       <icon type="success" v-if="active"></icon>
@@ -19,6 +19,7 @@ export default {
   props: {
    label:String,
    value:Boolean,
+   max:Number,
   },
   data () {
     return {
@@ -30,7 +31,14 @@ export default {
     
   },
   computed: {
-   
+    getStyle(){
+      let len=this.max?this.max:1;
+      if(len==1){
+        return {
+          width:"100%",
+        };
+      };
+    },
   },
   mounted(){
     
@@ -66,8 +74,12 @@ export default {
   }
   .k-ra-text{
     float: left;
+    width:calc(100% - 24px);
     line-height:20px;
     margin-left:4px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
   }
 }
 
