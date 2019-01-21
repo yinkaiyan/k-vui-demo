@@ -35,14 +35,5 @@ export default {
 }
 </script>
 <style scoped lang="less">
-.k-checkboxgroup{
-    width:calc(100% - 24px);
-    margin: 12px;
-    .tm-title{
-        width:100%;
-        float: left;
-        font-size: 18px;
-        font-weight: 600
-    }
-}
+@import "../../../assets/style.less";
 </style>
