@@ -1,95 +1,59 @@
-//time
-.time-page{
-    width:100%;
-    position: fixed;
-    height:42px;
-    top:0px;
-    left:0px;
-    background:#2d8cf0;
-    line-height:42px;
-    text-align:center;
-    color:#fff;
-    z-index: 9;
+//home
+.home{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: 0px;
+ top: 0px;
+ background: #fff;
 }
-//试卷
-.test-paper{
+.home-logo{
     width:100%;
     float: left;
-    margin-top:42px;
-    background:#fff;
-    .test-paper-title{
-        height:44px;
-        line-height:44px;
+    margin-top: 6px;
+    img{
+        width:256px;
+        margin-left:calc(50% - 128px);
         float: left;
-        width:100%;
-        text-align:center;
     }
-    .test-paper-content{
+    div{
         float: left;
-        width:100%;
-        .test-paper-list{
-            margin-top:12px;
+        text-align: center;
+        width: 100%;
+        line-height: 56px;
+    }
+} 
+//index
+.k-vui-index{
+    float:left;
+    width: 100%;
+    margin-top: 12px;
+    .comp-title{
+        width: 100%;
+        float: left;
+        text-indent: 12px;
+        font-size: 14px;
+        line-height: 52px;
+        background: #f9f9f9;
+    }
+    .comp-list{
+        width:calc(100% - 24px);
+        margin-left:12px;
+        float: left;
+        line-height: 42px;
+        height:42px;
+        border-bottom: solid 1px #efeded;
+        font-size: 13px;
+        .comp-list-title{
+            width: calc(100% - 42px);
             float: left;
+        }
+        .comp-list-icon{
+            width: 42px;
+            height: 42px;
+            float: left;
+            line-height: 42px;
+            text-align: center;
         }
     }
 }
-//radioGroup
-.k-checkboxgroup{
-    width:calc(100% - 24px);
-    margin: 12px;
-    .tm-title{
-        width:100%;
-        float: left;
-        font-size: 18px;
-        font-weight: 600
-    }
-}
-//radio
-.k-radio{
-    float: left;
-    margin: 6px 0;
-    padding: 12px;
-    box-sizing: border-box;
-    border: solid 1px gainsboro;
-    .magic-radio{
-      display:none;
-      
-    }
-    .k-radio-img{
-      max-width: 100%;
-      display: block;
-      border: none;
-      margin-top: 12px;
-      float: left;
-    }
-    .k-ra-radio{
-      width:20px;
-      height:20px;
-      background:#fff;
-      display:inline-block;
-      box-sizing:border-box;
-      border-radius:4px;
-      line-height:20px;
-      text-align:center;
-      position: relative;
-      float: left;
-      border-radius:50%;
-      border:solid 1px gainsboro;
-      i{
-        font-size: 20px;
-        position:absolute;
-        left: -5px;
-        top: -1px;
-      }
-    }
-    .k-ra-text{
-      float: left;
-      width:calc(100% - 26px);
-      line-height:20px;
-      margin-left:4px;
-      overflow: hidden;
-      text-overflow:ellipsis;
-      white-space: nowrap;
-    }
-  }
-  

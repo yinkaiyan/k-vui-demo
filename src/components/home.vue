@@ -1,19 +1,23 @@
 
-<template>
-  <div class="home_xm">
+
+<style scoped lang="less">
+@import "../assets/style.less";
+</style><template>
+  <div class="home">
+    <div class="home-logo">
+      <img src="../assets/logo.jpeg">
+      <div>K-VUI</div>
+    </div>
     <div class="home-content">
       <router-view></router-view>
     </div>
   </div>
 </template>
 <script>
-import { verification } from '../api/verification'
-import { Grid, GridItem } from 'vux'
 export default {
    name: 'home',
    components: {
-    Grid,
-    GridItem,
+    
   },
   data () {
     return {
