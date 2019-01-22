@@ -5,8 +5,7 @@
 </style><template>
   <div class="home">
     <div class="home-logo">
-      <img src="../assets/logo.jpeg">
-      <div>K-VUI</div>
+      <img src="../assets/logo.png">
     </div>
     <div class="home-content">
       <router-view></router-view>

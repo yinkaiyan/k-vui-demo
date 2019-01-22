@@ -25,6 +25,12 @@ export default new Router({
           meta: { title: 'index' }
         }
       ]
-    },
+    },{
+      //icon
+      path: '/icon',
+      name:"/icon",
+      component: resolve => require(['@/components/assembly/icon.vue'], resolve),
+      meta: { title: 'icon' }
+    }
   ]
 })

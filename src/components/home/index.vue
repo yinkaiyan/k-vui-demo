@@ -1,31 +1,34 @@
 
 <style scoped lang="less">
 @import "../../assets/style.less";
+@import "../../assets/iconfont.css";
 </style>
 <template>
   <div class="k-vui-index">
     <div class="comp-title">
-      基础组件
-    </div>
-    <div class="comp-list" v-for="(list,index) in basics" :key="index">
-      <div class="comp-list-title">
-        {{list.title}}
-      </div>
-      <div class="comp-list-icon">
-        ➡️
-      </div>
-    </div>
-    <div class="comp-title">
       布局
     </div>
-    <div class="comp-list" v-for="(list,index) in layout" :key="index">
+    <div class="comp-list" v-for="(list,index) in layout" @click="listClick(list.link)">
       <div class="comp-list-title">
         {{list.title}}
       </div>
       <div class="comp-list-icon">
-        ➡️
+        <i class="iconfont icon-CUI-icon-chevron-rig"></i>
       </div>
     </div>
+
+    <div class="comp-title">
+      基础组件
+    </div>
+    <div class="comp-list" v-for="(list,index) in basics">
+      <div class="comp-list-title">
+        {{list.title}}
+      </div>
+      <div class="comp-list-icon">
+        <i class="iconfont icon-CUI-icon-chevron-rig"></i>
+      </div>
+    </div>
+    
   </div>
 </template>
 <script>
@@ -65,7 +68,7 @@ export default {
           "icon":"",
           "title":"按钮"
         },{
-          "link":"",
+          "link":"/icon",
           "icon":"",
           "title":"图标"
         },
@@ -73,7 +76,11 @@ export default {
     }
   },
   methods:{
-    
+    listClick(link){
+      this.$router.push({
+        name:link
+      });
+    },
   },
   mounted(){
     
