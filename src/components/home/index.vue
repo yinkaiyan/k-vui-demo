@@ -15,12 +15,12 @@
       <div class="comp-list-icon">
         <i class="iconfont icon-CUI-icon-chevron-rig"></i>
       </div>
-    </div>
+    </div> 
 
     <div class="comp-title">
       基础组件
     </div>
-    <div class="comp-list" v-for="(list,index) in basics">
+    <div class="comp-list" v-for="(list,index) in basics" @click="listClick(list.link)">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -29,6 +29,17 @@
       </div>
     </div>
     
+    <div class="comp-title">
+      图片
+    </div>
+    <div class="comp-list" v-for="(list,index) in imgs" @click="listClick(list.link)">
+      <div class="comp-list-title">
+        {{list.title}}
+      </div>
+      <div class="comp-list-icon">
+        <i class="iconfont icon-CUI-icon-chevron-rig"></i>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -71,6 +82,17 @@ export default {
           "link":"/icon",
           "icon":"",
           "title":"图标"
+        },
+      ],
+      imgs:[
+        {
+          "link":"/swiper",
+          "icon":"",
+          "title":"图片轮播"
+        },{
+          "link":"",
+          "icon":"",
+          "title":"图片查看"
         },
       ],
     }

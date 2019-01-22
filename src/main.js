@@ -6,11 +6,11 @@ import router from './router'
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
 
-// import KVui from 'k-vui-y'
+import KVui from 'k-vui-y'
 
-// import "k-vui-y/src/assets/icon/iconfont.css";
+import "k-vui-y/src/style/iconfont.css";
 
-// Vue.use(KVui);
+Vue.use(KVui);
 
 Vue.config.productionTip = false
 

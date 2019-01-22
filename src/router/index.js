@@ -31,6 +31,12 @@ export default new Router({
       name:"/icon",
       component: resolve => require(['@/components/assembly/icon.vue'], resolve),
       meta: { title: 'icon' }
+    },{
+      //swiper
+      path: '/swiper',
+      name:"/swiper",
+      component: resolve => require(['@/components/assembly/swiper.vue'], resolve),
+      meta: { title: 'swiper' }
     }
   ]
 })
