@@ -30,11 +30,41 @@
         </k-icon>
       </div>
     </div>
+
+    <div class="comp-title">
+      表单组件
+    </div>
+    <div class="comp-list" v-for="(list,index) in form" @click="listClick(list.link)">
+      <div class="comp-list-title">
+        {{list.title}}
+      </div>
+      <div class="comp-list-icon">
+        <k-icon
+          type="icon-CUI-icon-chevron-rig"
+        > 
+        </k-icon>
+      </div>
+    </div>
     
     <div class="comp-title">
       图片
     </div>
     <div class="comp-list" v-for="(list,index) in imgs" @click="listClick(list.link)">
+      <div class="comp-list-title">
+        {{list.title}}
+      </div>
+      <div class="comp-list-icon">
+        <k-icon
+          type="icon-CUI-icon-chevron-rig"
+        > 
+        </k-icon>
+      </div>
+    </div>
+
+    <div class="comp-title">
+      tabs切换
+    </div>
+    <div class="comp-list" v-for="(list,index) in tabs" @click="listClick(list.link)">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -55,6 +85,28 @@ export default {
   name: 'index',
   data () {
     return {
+      tabs:[
+        {
+          "link":"/tabbar",
+          "icon":"",
+          "title":"tabs切换"
+        },
+      ],
+      form:[
+        {
+          "link":"/radio",
+          "icon":"",
+          "title":"radio单选框"
+        },{
+          "link":"/checkbox",
+          "icon":"",
+          "title":"checkbox复选框"
+        },{
+          "link":"/switch",
+          "icon":"",
+          "title":"switch开关"
+        },
+      ],
       layout:[
         {
           "link":"",

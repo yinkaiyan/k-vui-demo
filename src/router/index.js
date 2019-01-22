@@ -43,6 +43,30 @@ export default new Router({
       name:"/button",
       component: resolve => require(['@/components/assembly/button.vue'], resolve),
       meta: { title: 'button' }
+    },{
+      //radio
+      path: '/radio',
+      name:"/radio",
+      component: resolve => require(['@/components/assembly/radio.vue'], resolve),
+      meta: { title: 'radio' }
+    },{
+      //checkbox
+      path: '/checkbox',
+      name:"/checkbox",
+      component: resolve => require(['@/components/assembly/checkbox.vue'], resolve),
+      meta: { title: 'checkbox' }
+    },{
+      //switch
+      path: '/switch',
+      name:"/switch",
+      component: resolve => require(['@/components/assembly/switch.vue'], resolve),
+      meta: { title: 'switch' }
+    },{
+      //tabbar
+      path: '/tabbar',
+      name:"/tabbar",
+      component: resolve => require(['@/components/assembly/tabbar.vue'], resolve),
+      meta: { title: 'tabbar' }
     }
   ]
 })
