@@ -37,6 +37,12 @@ export default new Router({
       name:"/swiper",
       component: resolve => require(['@/components/assembly/swiper.vue'], resolve),
       meta: { title: 'swiper' }
+    },{
+      //button
+      path: '/button',
+      name:"/button",
+      component: resolve => require(['@/components/assembly/button.vue'], resolve),
+      meta: { title: 'button' }
     }
   ]
 })

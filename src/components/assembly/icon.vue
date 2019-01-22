@@ -1,10 +1,17 @@
 
 <style scoped lang="less">
 @import "../../assets/style.less";
-@import "../../assets/iconfont.css";
 </style>
 <template>
   <div class="demo-box">
+    <k-navbar
+        l-icon="icon-CUI-icon-chevron-lef"
+        title="图标"
+        :theme="['#5c6b77', '#fff']"
+        :l-click="licon"
+        type="text"
+    >
+    </k-navbar>
     <div class="icon-list" v-for="(list,index) in icon" :key="index">
        <i :class="'iconfont '+list.icon"></i>
        <span>{{list.icon}}</span>
@@ -289,7 +296,11 @@ export default {
     }
   },
   methods:{
-    
+    licon:function(){
+      this.$router.push({
+        name:'/home/index',
+      });
+    }
   },
   mounted(){
     

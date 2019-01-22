@@ -1,11 +1,10 @@
 
 <style scoped lang="less">
 @import "../../assets/style.less";
-@import "../../assets/iconfont.css";
 </style>
 <template>
   <div class="k-vui-index">
-    <div class="comp-title">
+    <!-- <div class="comp-title">
       布局
     </div>
     <div class="comp-list" v-for="(list,index) in layout" @click="listClick(list.link)">
@@ -15,7 +14,7 @@
       <div class="comp-list-icon">
         <i class="iconfont icon-CUI-icon-chevron-rig"></i>
       </div>
-    </div> 
+    </div>  -->
 
     <div class="comp-title">
       基础组件
@@ -25,7 +24,10 @@
         {{list.title}}
       </div>
       <div class="comp-list-icon">
-        <i class="iconfont icon-CUI-icon-chevron-rig"></i>
+        <k-icon
+          type="icon-CUI-icon-chevron-rig"
+        > 
+        </k-icon>
       </div>
     </div>
     
@@ -37,7 +39,10 @@
         {{list.title}}
       </div>
       <div class="comp-list-icon">
-        <i class="iconfont icon-CUI-icon-chevron-rig"></i>
+        <k-icon
+          type="icon-CUI-icon-chevron-rig"
+        > 
+        </k-icon>
       </div>
     </div>
   </div>
@@ -75,7 +80,7 @@ export default {
       ],
       basics:[
         {
-          "link":"",
+          "link":"/button",
           "icon":"",
           "title":"按钮"
         },{
@@ -89,11 +94,12 @@ export default {
           "link":"/swiper",
           "icon":"",
           "title":"图片轮播"
-        },{
-          "link":"",
-          "icon":"",
-          "title":"图片查看"
-        },
+        }
+        // ,{
+        //   "link":"",
+        //   "icon":"",
+        //   "title":"图片查看"
+        // },
       ],
     }
   },

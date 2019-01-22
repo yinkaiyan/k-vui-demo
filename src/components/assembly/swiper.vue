@@ -4,6 +4,14 @@
 </style>
 <template>
   <div class="demo-box">
+      <k-navbar
+          l-icon="icon-CUI-icon-chevron-lef"
+          title="轮播图"
+          :theme="['#5c6b77', '#fff']"
+          :l-click="licon"
+          type="text"
+      >
+      </k-navbar>
       <div class="comp-con-title">
         基本轮播图
       </div>
@@ -56,7 +64,12 @@ export default {
     }
   },
   methods:{
-    
+    licon:function(){
+      console.log(1)
+      this.$router.push({
+        name:'/home/index',
+      });
+    }
   },
   mounted(){
     
