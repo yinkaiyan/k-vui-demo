@@ -75,6 +75,21 @@
         </k-icon>
       </div>
     </div>
+
+    <div class="comp-title">
+      弹出层
+    </div>
+    <div class="comp-list" v-for="(list,index) in alert" @click="listClick(list.link)">
+      <div class="comp-list-title">
+        {{list.title}}
+      </div>
+      <div class="comp-list-icon">
+        <k-icon
+          type="icon-CUI-icon-chevron-rig"
+        > 
+        </k-icon>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -152,6 +167,18 @@ export default {
         //   "icon":"",
         //   "title":"图片查看"
         // },
+      ],
+      alert:[
+        {
+          "link":"/loading",
+          "icon":"",
+          "title":"loading加载"
+        }
+        ,{
+          "link":"/popup",
+          "icon":"",
+          "title":"popup弹出层"
+        },
       ],
     }
   },

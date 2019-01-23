@@ -67,6 +67,18 @@ export default new Router({
       name:"/tabbar",
       component: resolve => require(['@/components/assembly/tabbar.vue'], resolve),
       meta: { title: 'tabbar' }
+    },{
+      //loading
+      path: '/loading',
+      name:"/loading",
+      component: resolve => require(['@/components/assembly/loading.vue'], resolve),
+      meta: { title: 'loading' }
+    },{
+      //popup
+      path: '/popup',
+      name:"/popup",
+      component: resolve => require(['@/components/assembly/popup.vue'], resolve),
+      meta: { title: 'popup' }
     }
   ]
 })
