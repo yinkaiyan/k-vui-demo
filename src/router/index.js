@@ -79,6 +79,36 @@ export default new Router({
       name:"/popup",
       component: resolve => require(['@/components/assembly/popup.vue'], resolve),
       meta: { title: 'popup' }
+    },{
+      //collapse
+      path: '/collapse',
+      name:"/collapse",
+      component: resolve => require(['@/components/assembly/collapse.vue'], resolve),
+      meta: { title: 'collapse' }
+    },{
+      //actionsheet
+      path: '/actionsheet',
+      name:"/actionsheet",
+      component: resolve => require(['@/components/assembly/actionsheet.vue'], resolve),
+      meta: { title: 'actionsheet' }
+    },{
+      //swipecell
+      path: '/swipecell',
+      name:"/swipecell",
+      component: resolve => require(['@/components/assembly/swipecell.vue'], resolve),
+      meta: { title: 'swipecell' }
+    },{
+      //time
+      path: '/time',
+      name:"/time",
+      component: resolve => require(['@/components/assembly/time.vue'], resolve),
+      meta: { title: 'time' }
+    },{
+      //prompt
+      path: '/prompt',
+      name:"/prompt",
+      component: resolve => require(['@/components/assembly/prompt.vue'], resolve),
+      meta: { title: 'prompt' }
     }
   ]
 })

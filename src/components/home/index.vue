@@ -4,22 +4,11 @@
 </style>
 <template>
   <div class="k-vui-index">
-    <!-- <div class="comp-title">
-      布局
-    </div>
-    <div class="comp-list" v-for="(list,index) in layout" @click="listClick(list.link)">
-      <div class="comp-list-title">
-        {{list.title}}
-      </div>
-      <div class="comp-list-icon">
-        <i class="iconfont icon-CUI-icon-chevron-rig"></i>
-      </div>
-    </div>  -->
 
     <div class="comp-title">
       基础组件
     </div>
-    <div class="comp-list" v-for="(list,index) in basics" @click="listClick(list.link)">
+    <div class="comp-list" v-for="list in basics" @click="listClick(list.link)" :key="list.link">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -34,7 +23,7 @@
     <div class="comp-title">
       表单组件
     </div>
-    <div class="comp-list" v-for="(list,index) in form" @click="listClick(list.link)">
+    <div class="comp-list" v-for="list in form" @click="listClick(list.link)" :key="list.link">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -47,9 +36,9 @@
     </div>
     
     <div class="comp-title">
-      图片
+      滑动组件
     </div>
-    <div class="comp-list" v-for="(list,index) in imgs" @click="listClick(list.link)">
+    <div class="comp-list" v-for="list in imgs" @click="listClick(list.link)" :key="list.link">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -62,9 +51,9 @@
     </div>
 
     <div class="comp-title">
-      tabs切换
+      切换组件
     </div>
-    <div class="comp-list" v-for="(list,index) in tabs" @click="listClick(list.link)">
+    <div class="comp-list" v-for="list in tabs" @click="listClick(list.link)" :key="list.link">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -79,7 +68,22 @@
     <div class="comp-title">
       弹出层
     </div>
-    <div class="comp-list" v-for="(list,index) in alert" @click="listClick(list.link)">
+    <div class="comp-list" v-for="list in alert" @click="listClick(list.link)" :key="list.link">
+      <div class="comp-list-title">
+        {{list.title}}
+      </div>
+      <div class="comp-list-icon">
+        <k-icon
+          type="icon-CUI-icon-chevron-rig"
+        > 
+        </k-icon>
+      </div>
+    </div>
+
+    <div class="comp-title">
+      其他组件
+    </div>
+    <div class="comp-list" v-for="list in other" @click="listClick(list.link)" :key="list.link">
       <div class="comp-list-title">
         {{list.title}}
       </div>
@@ -100,11 +104,23 @@ export default {
   name: 'index',
   data () {
     return {
+      other:[
+        {
+          "link":"/time",
+          "icon":"",
+          "title":"倒计时"
+        }
+      ],
       tabs:[
         {
           "link":"/tabbar",
           "icon":"",
           "title":"tabs切换"
+        }
+        ,{
+          "link":"/collapse",
+          "icon":"",
+          "title":"折叠面板"
         },
       ],
       form:[
@@ -161,23 +177,29 @@ export default {
           "link":"/swiper",
           "icon":"",
           "title":"图片轮播"
+        },{
+          "link":"/swipecell",
+          "icon":"",
+          "title":"滑动单元格"
         }
-        // ,{
-        //   "link":"",
-        //   "icon":"",
-        //   "title":"图片查看"
-        // },
       ],
       alert:[
         {
           "link":"/loading",
           "icon":"",
           "title":"loading加载"
-        }
-        ,{
+        },{
           "link":"/popup",
           "icon":"",
           "title":"popup弹出层"
+        },{
+          "link":"/actionsheet",
+          "icon":"",
+          "title":"底部弹出层"
+        },{
+          "link":"/prompt",
+          "icon":"",
+          "title":"轻提示"
         },
       ],
     }

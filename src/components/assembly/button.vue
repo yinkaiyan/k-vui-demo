@@ -36,7 +36,7 @@
     >
     </k-navbar>
     <!--dashed-->
-    <div class="btn-title">
+    <div class="comp-con-title">
       按钮类型
     </div>
     <div class="btn-list">
@@ -99,7 +99,7 @@
       </k-button>
     </div>
     <!--success mini-->
-    <div class="btn-title">
+    <div class="comp-con-title">
       小型按钮
     </div>
     <div class="btn-list">
@@ -163,7 +163,7 @@
       </k-button>
     </div>
     <!--一般按钮-->
-    <div class="btn-title">
+    <div class="comp-con-title">
       一般按钮
     </div>
     <div class="btn-list">
@@ -232,7 +232,7 @@
       </k-button>
     </div>
     <!--圆形按钮-->
-    <div class="btn-title">
+    <div class="comp-con-title">
       圆形按钮
     </div>
     <div class="btn-list">
@@ -301,7 +301,7 @@
       </k-button>
     </div>
     <!--大按钮-->
-    <div class="btn-title">
+    <div class="comp-con-title">
       大按钮
     </div>
     <div class="btn-list btn-max">

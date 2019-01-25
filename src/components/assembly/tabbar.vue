@@ -15,7 +15,7 @@ p{
   <div class="demo-box">
     <k-navbar
       l-icon="icon-CUI-icon-chevron-lef"
-      title="switch开关"
+      title="tabs切换"
       :theme="['#5c6b77', '#fff']"
       :l-click="licon"
       type="text"

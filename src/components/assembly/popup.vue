@@ -2,8 +2,8 @@
 <style scoped lang="less">
 @import "../../assets/style.less";
 .k-switch-list{
-  width:90%;
-  margin:24px 5%;
+  width:calc(100% - 24px);
+  margin:12px;
   height:38px;
   line-height:38px;
   .title{
@@ -11,7 +11,6 @@
     width:100%;
     margin-left:4px;
     float: left;
-    border-bottom: solid 1px gainsboro;
   }
   span{
       display:inline-block;
@@ -23,15 +22,16 @@
   <div class="demo-box">
       <k-navbar
         l-icon="icon-CUI-icon-chevron-lef"
-        title="按钮"
+        title="popup弹出层"
         :theme="['#5c6b77', '#fff']"
         :l-click="licon"
         type="text"
     >
     </k-navbar>
-    
+    <div class="comp-con-title">
+      有标题
+    </div>
     <div class="k-switch-list">
-      <div class="title">有标题</div>
       <k-switch
         :value="value1"
         :callback="clickFun1"
@@ -48,8 +48,10 @@
        <a href="https://www.3vshow.com">test</a>
     </k-alert>
 
+    <div class="comp-con-title">
+      无标题
+    </div>
     <div class="k-switch-list">
-      <div class="title">无标题</div>
       <k-switch
         :value="value2"
         :callback="clickFun2"
@@ -64,8 +66,11 @@
     >
     </k-alert>
 
+
+    <div class="comp-con-title">
+      单个按钮
+    </div>
     <div class="k-switch-list">
-      <div class="title">单个按钮</div>
       <k-switch
         :value="value3"
         :callback="clickFun3"
@@ -83,13 +88,16 @@
     </k-alert>
 
 
+    <div class="comp-con-title">
+      自定义文本
+    </div>
     <div class="k-switch-list">
-      <div class="title">文本输入</div>
+      <div class="title"></div>
       <k-switch
         :value="value4"
         :callback="clickFun4"
       ></k-switch>
-      <span>文本输入 {{value4}}</span>
+      <span>自定义文本 {{value4}}</span>
     </div>
     <k-alert
       title="标题"
