@@ -109,6 +109,48 @@ export default new Router({
       name:"/prompt",
       component: resolve => require(['@/components/assembly/prompt.vue'], resolve),
       meta: { title: 'prompt' }
+    },{
+      //divider
+      path: '/divider',
+      name:"/divider",
+      component: resolve => require(['@/components/assembly/divider.vue'], resolve),
+      meta: { title: 'divider' }
+    },{
+      //inputNumber
+      path: '/inputNumber',
+      name:"/inputNumber",
+      component: resolve => require(['@/components/assembly/inputNumber.vue'], resolve),
+      meta: { title: 'inputNumber' }
+    },{
+      //keyBoard
+      path: '/keyBoard',
+      name:"/keyBoard",
+      component: resolve => require(['@/components/assembly/keyBoard.vue'], resolve),
+      meta: { title: 'keyBoard' }
+    },{
+      //score
+      path: '/score',
+      name:"/score",
+      component: resolve => require(['@/components/assembly/score.vue'], resolve),
+      meta: { title: 'score' }
+    },{
+      //input
+      path: '/input',
+      name:"/input",
+      component: resolve => require(['@/components/assembly/input.vue'], resolve),
+      meta: { title: 'input' }
+    },{
+      //notice
+      path: '/notice',
+      name:"/notice",
+      component: resolve => require(['@/components/assembly/notice.vue'], resolve),
+      meta: { title: 'notice' }
+    },{
+      //step
+      path: '/step',
+      name:"/step",
+      component: resolve => require(['@/components/assembly/step.vue'], resolve),
+      meta: { title: 'step' }
     }
   ]
 })

@@ -116,12 +116,15 @@ export default {
           "link":"/tabbar",
           "icon":"",
           "title":"tabs切换"
-        }
-        ,{
+        },{
           "link":"/collapse",
           "icon":"",
           "title":"折叠面板"
-        },
+        },{
+          "link":"/step",
+          "icon":"",
+          "title":"步骤条"
+        }
       ],
       form:[
         {
@@ -136,6 +139,22 @@ export default {
           "link":"/switch",
           "icon":"",
           "title":"switch开关"
+        },{
+          "link":"/inputNumber",
+          "icon":"",
+          "title":"数字输入"
+        },{
+          "link":"/keyBoard",
+          "icon":"",
+          "title":"数字键盘"
+        },{
+          "link":"/score",
+          "icon":"",
+          "title":"评分"
+        },{
+          "link":"/input",
+          "icon":"",
+          "title":"input"
         },
       ],
       layout:[
@@ -170,6 +189,10 @@ export default {
           "link":"/icon",
           "icon":"",
           "title":"图标"
+        },{
+          "link":"/divider",
+          "icon":"",
+          "title":"分割线"
         },
       ],
       imgs:[
@@ -200,7 +223,11 @@ export default {
           "link":"/prompt",
           "icon":"",
           "title":"轻提示"
-        },
+        },{
+          "link":"/notice",
+          "icon":"",
+          "title":"全局提示"
+        }
       ],
     }
   },

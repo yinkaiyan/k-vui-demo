@@ -1,29 +1,7 @@
 
 <style scoped lang="less">
 @import "../../assets/style.less";
-.btn-title{
-  width:100%;
-  float: left;
-  line-height:36px;
-  text-indent:16px;
-  margin-top:22px;
-  background: #f9f9f9;
-}
-.btn-list{
-  margin:6px 4%;
-  float: left;
-  div{
-    width:50%;
-    float: left;
-    padding:0px 4px;
-    box-sizing:border-box;
-  }
-}
-.btn-max{
-  width:92%;
-  text-indent:0px;
-  margin:6px 4%;
-}
+
 </style>
 <template>
   <div class="demo-box">

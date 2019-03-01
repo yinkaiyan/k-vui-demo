@@ -1,22 +1,6 @@
 
 <style scoped lang="less">
 @import "../../assets/style.less";
-.k-switch-list{
-  width:calc(100% - 24px);
-  margin:12px;
-  height:38px;
-  line-height:38px;
-  .title{
-    line-height:32px;
-    width:100%;
-    margin-left:4px;
-    float: left;
-  }
-  span{
-      display:inline-block;
-      float:right;
-  }
-}
 </style>
 <template>
   <div class="demo-box">
@@ -45,7 +29,7 @@
         :yes-callback="yesCallback1"
         :no-callback="noCallback1"
     >
-       <a href="https://www.3vshow.com">test</a>
+       
     </k-alert>
 
     <div class="comp-con-title">

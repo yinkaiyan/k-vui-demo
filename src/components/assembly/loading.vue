@@ -1,28 +1,10 @@
 
 <style scoped lang="less">
 @import "../../assets/style.less";
-.k-switch-list{
-  width:90%;
-  margin:36px 5%;
-  height:38px;
-  line-height:38px;
-  float: left;
-  .title{
-    line-height:32px;
-    width:100%;
-    margin-left:4px;
-    float: left;
-    border-bottom: solid 1px gainsboro;
-  }
-  span{
-      display:inline-block;
-      float:right;
-  }
-}
 </style>
 <template>
   <div class="demo-box">
-      <k-navbar
+    <k-navbar
         l-icon="icon-CUI-icon-chevron-lef"
         title="loading"
         :theme="['#5c6b77', '#fff']"
@@ -30,6 +12,9 @@
         type="text"
     >
     </k-navbar>
+    <div class="comp-con-title">
+      样式一
+    </div>
     <div class="k-switch-list">
       <k-switch
         :value="value1"
@@ -38,18 +23,85 @@
       <span>Loding {{value1}}</span>
     </div>
 
-    <div class="k-switch-list">
-      <k-button
-        text="Loding"
-        type="success"
-        :callback="success"
-      >
-      </k-button>
-    </div>
-
     <k-loading
       :value="value1"
       text="Loding"
+      type="1"
+    >
+
+    </k-loading>
+
+    <div class="comp-con-title">
+      样式二
+    </div>
+    <div class="k-switch-list">
+      <k-switch
+        :value="value2"
+        :callback="clickFun2"
+      ></k-switch>
+      <span>Loding {{value2}}</span>
+    </div>
+
+    <k-loading
+      :value="value2"
+      text="Loding"
+      type="2"
+    >
+
+    </k-loading>
+
+    <div class="comp-con-title">
+      样式三
+    </div>
+    <div class="k-switch-list">
+      <k-switch
+        :value="value3"
+        :callback="clickFun3"
+      ></k-switch>
+      <span>Loding {{value3}}</span>
+    </div>
+
+    <k-loading
+      :value="value3"
+      text="Loding"
+      type="3"
+    >
+
+    </k-loading>
+    <div class="comp-con-title">
+      样式四
+    </div>
+    <div class="k-switch-list">
+      <k-switch
+        :value="value4"
+        :callback="clickFun4"
+      ></k-switch>
+      <span>Loding {{value4}}</span>
+    </div>
+
+    <k-loading
+      :value="value4"
+      text="Loding"
+      type="4"
+    >
+
+    </k-loading>
+
+    <div class="comp-con-title">
+      样式五
+    </div>
+    <div class="k-switch-list">
+      <k-switch
+        :value="value5"
+        :callback="clickFun5"
+      ></k-switch>
+      <span>Loding {{value5}}</span>
+    </div>
+
+    <k-loading
+      :value="value5"
+      text="Loding"
+      type="5"
     >
 
     </k-loading>
@@ -64,6 +116,10 @@ export default {
   data () {
     return {
         value1:false,
+        value2:false,
+        value3:false,
+        value4:false,
+        value5:false,
     }
   },
   methods:{
@@ -79,11 +135,32 @@ export default {
           self.value1=false;
       },2000)
     },
-    success(){
-      this.value1=true;
+    clickFun2(){
+      this.value2=true;
       var self=this;
       setTimeout(function(){
-          self.value1=false;
+          self.value2=false;
+      },2000)
+    },
+    clickFun3(){
+      this.value3=true;
+      var self=this;
+      setTimeout(function(){
+          self.value3=false;
+      },2000)
+    },
+    clickFun4(){
+      this.value4=true;
+      var self=this;
+      setTimeout(function(){
+          self.value4=false;
+      },2000)
+    },
+    clickFun5(){
+      this.value5=true;
+      var self=this;
+      setTimeout(function(){
+          self.value5=false;
       },2000)
     },
   },

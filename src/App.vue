@@ -10,12 +10,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 body{
+  // background: $title;
   padding: 0px;
   margin:0px;
   width:100%;
   float: left;
 }
-
 </style>

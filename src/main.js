@@ -5,7 +5,7 @@ import router from './router'
 
 import KVui from 'k-vui-y'
 
-import "k-vui-y/src/style/iconfont.css";
+import "k-vui-y/src/styles/icon/iconfont.css";
 
 Vue.use(KVui);
 

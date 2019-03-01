@@ -291,6 +291,14 @@ export default {
                 icon:"icon-zinv",
             },{
                 icon:"icon-zichanqingkuang",
+            },{
+                icon:"icon-shoucang1",
+            },{
+                icon:"icon-shoucang",
+            },{
+                icon:"icon-icon_xiaolian-xian",
+            },{
+                icon:"icon-icon_xiaolian-mian",
             }
         ]
     }
