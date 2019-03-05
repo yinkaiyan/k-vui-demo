@@ -151,6 +151,12 @@ export default new Router({
       name:"/step",
       component: resolve => require(['@/components/assembly/step.vue'], resolve),
       meta: { title: 'step' }
+    },{
+      //date
+      path: '/date',
+      name:"/date",
+      component: resolve => require(['@/components/assembly/date.vue'], resolve),
+      meta: { title: 'date' }
     }
   ]
 })

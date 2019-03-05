@@ -154,7 +154,11 @@ export default {
         },{
           "link":"/input",
           "icon":"",
-          "title":"input"
+          "title":"input输入"
+        },{
+          "link":"/date",
+          "icon":"",
+          "title":"时间日期"
         },
       ],
       layout:[
