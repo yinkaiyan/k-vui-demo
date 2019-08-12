@@ -101,7 +101,7 @@ export default {
   components:{
     
   },
-  name: 'index',
+  name: 'indexpage',
   data () {
     return {
       other:[
@@ -243,7 +243,7 @@ export default {
     },
   },
   mounted(){
-    
+    console.log(1);
   },
 }
 </script>

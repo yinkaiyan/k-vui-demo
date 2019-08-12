@@ -8,7 +8,7 @@
       <img src="../assets/logo.png">
     </div>
     <div class="home-content">
-      <router-view></router-view>
+        <router-view></router-view>
     </div>
   </div>
 </template>

@@ -20,9 +20,11 @@ export default new Router({
         {
           //index
           path: '/home/index',
-          name:"/home/index",
+          name:"indexpage",
           component: resolve => require(['@/components/home/index.vue'], resolve),
-          meta: { title: 'index' }
+          meta: { 
+            title: 'index'
+          }
         }
       ]
     },{
